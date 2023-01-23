@@ -1,40 +1,18 @@
-.exercise {
-  border: 0.125rem solid red;
-  padding: 0.5rem;
-  text-align: center;
-}
-.exercise .exercise-title {
-  color: green;
-  text-decoration: underline;
-  text-decoration-color: blue;
-}
-.exercise .first-section {
-  display: flex;
-}
-.exercise .first-section article {
-  padding: 0.5rem;
-}
-.exercise .first-section article:nth-child(odd) {
-  font-size: 1rem;
-  color: blue;
-  margin: 0;
-  border: 0.125rem solid;
-  border-color: green;
-}
-.exercise .first-section article:nth-child(even) {
-  font-size: 1rem;
-  color: red;
-  margin: 0;
-  border: 0.125rem solid;
-  border-color: green;
-}
-.exercise .footer {
-  font-size: 1.5rem;
-  color: green;
-  margin: 0;
-  border: 0.125rem solid;
-  border-color: blue;
-  margin-top: 0.625rem;
-}
+/* Error: There is no module with the namespace "convert".
+ *   ,
+ * 6 |   font-size: convert.$pxToRem($font-size);
+ *   |              ^^^^^^^^^^^^^^^^
+ *   '
+ *   style.scss 6:14  article-style()
+ *   style.scss 31:9  root stylesheet */
 
-/*# sourceMappingURL=style.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "convert".\a   \2577 \a 6 \2502    font-size: convert.$pxToRem($font-size);\d\a   \2502               ^^^^^^^^^^^^^^^^\a   \2575 \a   style.scss 6:14  article-style()\a   style.scss 31:9  root stylesheet';
+}
