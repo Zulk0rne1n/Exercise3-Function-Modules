@@ -1,0 +1,43 @@
+@use "variables.scss";
+@import "convert.scss";
+
+
+@mixin article-style($color, $border-color, $font-size) {
+  font-size: convertToRem($font-size);
+  color: $color;
+  margin: 0;
+  border: convertToRem(2) solid;
+  border-color: $border-color;
+}
+
+.exercise {
+  border: convertToRem(2) solid variables.$primary;
+  padding: convertToRem(8);
+  text-align: center;
+
+  .exercise-title {
+    color: variables.$tertiary;
+    text-decoration: underline;
+    text-decoration-color: variables.$secondary;
+  }
+
+  .first-section {
+    display: flex;
+
+    article {
+      padding: convertToRem(8);
+
+      &:nth-child(odd) {
+        @include article-style(variables.$secondary, variables.$tertiary, 16);
+      }
+      &:nth-child(even) {
+        @include article-style(variables.$primary, variables.$tertiary, 16);
+      }
+    }
+  }
+
+  .footer {
+    @include article-style(variables.$tertiary, variables.$secondary, 24);
+    margin-top: convertToRem(10);
+  }
+}
